@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS3 3d Experiments</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/space3d.css" type="text/css" rel="stylesheet">
+         <script type="text/javascript" src="js/space3d.js"></script>        
+    </head>
+    <body onload="baNS.spaceTest.init()">
+        <div class="space">           
+           <div class="cube">     
+               <div id="surround">
+                    <div class="face front">1
+                       <div class="dot frontdot"></div>
+                    </div>                      
+                    <div class="face back">2
+                        <div class="dot backdot"></div>
+                    </div>                    
+                    <div class="face right">3
+                        <div class="dot rightdot"></div>
+                    </div>
+                    <div class="face left">4
+                        <div class="dot leftdot"></div>
+                    </div>                    
+                    <div class="face top">5
+                        <div class="dot topdot"></div>
+                    </div>
+                    <div class="face bottom">6
+                         <div class="dot bottomdot"></div>
+                    </div>                                   
+               </div> 
+               <div class="paddle">
+                    <div class="yaxis"></div>              
+                    <div class="dot reddot">L</div>
+                    <div class="dot bluedot">R</div>                        
+                </div>                             
+         </div>                                 
+        </div>
+        <div class="controls">
+            <div id="cube">
+                <div class="label">X</div>
+                <div class="label">Y</div>
+                <div class="label">Width</div>
+                <div class="label">Height</div>
+                <div class="label">Depth</div>
+                <div class="label">Perspective</div>
+                <div class="label">Origin X</div>
+                <div class="label">Origin Y</div>
+                <div class="label">Hide </div>
+                <div class="label">Cube</div><br>               
+                <input class="nums" type="number" value="300" name="x">
+                <input class="nums" type="number" value="100" name="y"> 
+                <input class="nums" type="number" value="400" name="width"> 
+                <input class="nums" type="number" value="400" name="height">
+                <input class="nums" type="number" value="400" name="depth">                
+                <input class="nums" step="100"  type="number" value="4000" name="perspective">
+                <input class="nums" type="number" step = "10" value="1000" name="originX">
+                <input class="nums" type="number" step = "10" value="-1500" name="originY">
+                <input  type="checkbox" name="hidden">
+            </div>
+             <div id="paddle"> 
+                <div class="label">X</div>
+                <div class="label">Y</div>
+                <div class="label">Z</div>
+                <div class="label">Width</div>
+                <div class="label">Height</div>
+                <div class="label">Rotate X</div>
+                <div class="label">Rotate Y</div>
+                <div class="label">Rotate Z</div>
+                <div class="label">Paddle</div>
+                <br>               
+                <input class="nums" type="number" value="0" name="x">
+                <input class="nums" type="number" value="150" name="y"> 
+                <input class="nums" type="number" value="0" name="z">            
+                <input class="nums" type="number" value="400"  name="width"> 
+                <input class="nums" type="number" value="100"  name="height">
+                <input class="nums" step="10" type="number" value="0" name="rotateX">
+                <input class="nums" step="10" type="number" value="0" name="rotateY">
+                <input class="nums" step="10" type="number" value="0" name="rotateZ">
+                <input type="button" name="animate" value="animate">
+                <select class="nums" name="animSelect">
+                    <option value="paddleY">paddleY</option>
+                    <option value="paddleX">paddleX</option>
+                    <option value="paddleZ">paddleZ</option>
+                    <option value="cubeY">cubeY</option> 
+                    <option value="cubeX">cubeX</option> 
+                    <option value="cubeZ">cubeZ</option>                     
+                </select>                
+                <br>
+                <select class="nums" name="cssSelect">
+                    <option value="">none</option>
+                    <option value='{"el":"objects","obj":"cube"}'>cube</option>
+                    <option value='{"el":"objects","obj":"paddle"}'>paddle</option>
+                    <option value='{"el":"faces","obj":"front"}'>front face</option>
+                    <option value='{"el":"faces","obj":"back"}'>back face</option>
+                    <option value='{"el":"faces","obj":"right"}'>right face</option>
+                    <option value='{"el":"faces","obj":"left"}'>left face</option>
+                    <option value='{"el":"faces","obj":"top"}'>top face</option>
+                    <option value='{"el":"faces","obj":"bottom"}'>bottom face</option>                    
+                </select>
+                <span id="style">Inline css: </span>
+            </div>
+        </div>
+    </body>
+</html>

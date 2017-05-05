@@ -1,0 +1,116 @@
+/* 
+    Created on : 24 avr. 2017, 10:23:46
+    Author     : Brian Akehurst
+*/
+body {
+   margin: 0;
+   padding: 0;
+}
+.label {
+    display: inline-block;
+    padding: 0 5px 0 5px;
+    width:65px;
+    margin-right: 4px;
+    font-weight: bold;
+}
+.space {
+    margin: 20px;
+    width:1000px;
+    height:706px;
+    margin-bottom: 0;
+    border: 3px solid green;
+    overflow: hidden; 
+}
+.cube {
+    backface-visibility: visible;    
+    transform-style: preserve-3d;
+}
+.face {
+  display: block;
+  position: absolute;
+  border: none;
+  line-height: 200px;
+  font-family: sans-serif;
+  font-size: 60px;
+  color: white;
+  text-align: center;
+}
+.front {
+  background: rgba(0, 0, 0, 0.2);
+}
+.frontdot {
+    background: rgba(0, 0, 0, 1);  
+}
+.back {
+  background: rgba(0, 255, 0, 0.5);
+}
+.backdot {    
+    background: rgba(0, 255, 0, 1);  
+}
+.right {
+  background: rgba(196, 0, 0, 0.5);
+}
+.rightdot{
+   background: rgba(196, 0, 0, 1);
+}
+.left {
+  background: rgba(0, 0, 196, 0.5);
+}
+.leftdot {   
+   background:  rgba(0, 0, 196, 1);   
+}
+.top {
+  background: rgba(196, 196, 0, 0.5);
+}
+.topdot {
+   background: rgba(196, 196, 0, 1);   
+}
+.bottom {
+  background: rgba(196, 0, 196, 0.5);
+}
+.bottomdot {  
+   background: rgba(196, 0, 196, 1);   
+}
+
+.paddle {    
+   position: absolute;
+   display: block;
+   background-color: rgba(255, 255, 0, 1);
+}
+.yaxis {
+    position: absolute;
+    width:4px;
+    height:600px;
+    background: black;
+    top:-250%;
+    left:calc(50% - 2px);
+}
+.dot {
+    position: absolute;
+    top:calc(50% - 10px);
+    left:calc(50% - 10px);   
+    width:20px;
+    height:20px;   
+    border-radius: 50%;
+    line-height: 15px;
+    color:white;    
+    text-align: center;   
+}
+.reddot { 
+   left:0;
+   background-color: red;;
+}
+.bluedot {
+    left:calc(100% - 20px);
+    background-color: blue;      
+}
+.controls {
+    width: 1000px;
+    height: 150px;
+    margin-left: 20px;
+    border: 2px solid blue;
+}
+.nums {
+    width:65px;
+    margin: 4px;
+}
